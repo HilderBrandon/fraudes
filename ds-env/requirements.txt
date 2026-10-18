@@ -1,0 +1,31 @@
+# --- Notebooks ---
+jupyterlab
+ipywidgets
+
+# --- Datos y cálculo ---
+numpy
+pandas
+pyarrow
+openpyxl
+scipy
+statsmodels
+
+# --- Visualización ---
+matplotlib
+seaborn
+plotly
+
+# --- Machine Learning ---
+scikit-learn
+xgboost
+lightgbm
+imbalanced-learn
+optuna
+
+# --- Interpretabilidad ---
+shap
+
+# --- Utilidades ---
+kaggle
+python-pptx
+tqdm

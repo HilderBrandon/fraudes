@@ -1,0 +1,19 @@
+# Datos de la competencia (no redistribuir: reglas de Kaggle)
+data/*
+!data/.gitkeep
+*.csv
+
+# Artefactos generados por los notebooks (pesados, se regeneran)
+fraude/artefactos/
+fraude/submissions/
+*.pkl
+*.parquet
+
+# Credenciales
+kaggle.json
+.env
+
+# Sistema / Jupyter
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/

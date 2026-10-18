@@ -1,0 +1,11 @@
+services:
+  jupyter:
+    build: .
+    image: ds-env:latest
+    container_name: ds-env
+    ports:
+      - "127.0.0.1:8888:8888"   # solo accesible desde este computador
+    volumes:
+      - ${PROYECTO:-..}:/work          # carpeta que se ve en Jupyter (por defecto la de arriba de ds-env)
+      - ~/.kaggle:/root/.kaggle:ro     # credenciales de Kaggle (opcional)
+    restart: unless-stopped
