@@ -18,7 +18,7 @@ predicción sobre `test` para la entrega en Kaggle.
 │   ├── docker-compose.yml
 │   ├── requirements.txt
 │   └── versiones.txt       # versiones exactas instaladas
-├── data/                   # aquí van train.csv, test.csv y sample_submission.csv (no se versionan)
+├── data/                   # datos de la competencia: train.csv, test.csv, sample_submission.csv
 └── fraude/
     ├── 01_EDA_ingenieria_variables.ipynb   # exploración, limpieza y construcción de la base de modelamiento
     ├── 02_Regresion_Logistica.ipynb
@@ -36,15 +36,11 @@ suben al repositorio porque pesan cientos de MB y se regeneran corriendo los not
 
 1. **Clonar el repositorio**
    ```bash
-   git clone <url-del-repo>
-   cd modelos-fraude-2026
+   git clone https://github.com/HilderBrandon/fraudes.git
+   cd fraudes
    ```
-2. **Descargar los datos** desde la pestaña *Data* de la competencia (hay que aceptar sus
-   reglas) y guardar `train.csv`, `test.csv` y `sample_submission.csv` en `data/`.
-   Con la CLI de Kaggle:
-   ```bash
-   kaggle competitions download -c modelos-de-fraude-2026 -p data && unzip data/*.zip -d data
-   ```
+2. **Datos:** ya vienen incluidos en `data/` (`train.csv`, `test.csv` y `sample_submission.csv`),
+   tal como se descargaron de la competencia.
 3. **Levantar el entorno**
    ```bash
    cd ds-env
@@ -72,4 +68,3 @@ AUC a ~0.68, porque el AUC necesita un *ranking* de probabilidades.
 ## Requisitos
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) (o Python 3.12 con `pip install -r ds-env/requirements.txt`)
-- Cuenta de Kaggle para descargar los datos
